@@ -1,0 +1,89 @@
+การสร้าง Object แบบปกติ
+
+const bas = {
+  name : 'Bas',
+  age : 26
+}
+
+ถ้าจะสร้างข้อมูลคนต่อไปก็ต้องประกาศซ้ำอีกครั้ง
+
+const aib = {
+  name : 'Aib',
+  age : 27
+}
+
+console.log(bas);
+console.log(aib.name);
+
+///////////////////////
+
+สร้าง Object คือสร้าง function ตัวอย่างข้นมาแล้วเรียกเอาไปใช้
+
+/* *
+* Class 
+* Instance
+* Constructor
+* 
+ */
+
+ // Person Constructor
+function Person() {
+
+}
+ใช้ตัวพิมพ์ใหญ่
+
+///////////////////////
+
+this ใน function กับ this ใน global object (window object)
+
+Function Scope
+- this refer to current instance in object
+
+Global Scope
+- this global scope refer window object
+
+///////////////////////
+
+method คือ function inside object
+
+///////////////////////
+
+function Person(name,dob) {
+  this.name = name;
+  this.age = age;
+  // * this refer to current instance in object
+
+  this.birthday = new Date(dob);
+  // ใส่ค่า dob จะสร้าง Date object (ซึ่งเป็น core object ของ JS อยู่แล้ว มี format หลายแบบ ลองกลับไปดู section 2)
+
+  this.calculateAge = function() {
+    // this เข้าถึงได้ทุก variable ใน function scope
+    const diff = Date.now() - this.birthday;
+    return diff;
+  };
+}
+
+///////////////////////
+Date time
+
+Date.now(); return เป็น millisecond  (ms)
+getTime(); เป็น timestamp เริ่มจาก 1970 return เป็น ms
+
+
+///////////////////////
+เอาค่าปี
+
+
+var date1 = new Date('December 31, 1975, 23:15:30 GMT+11:00');
+var date2 = new Date('December 31, 1975, 23:15:30 GMT-11:00');
+
+console.log(date1.getUTCFullYear());
+// expected output: 1975
+
+console.log(date2.getUTCFullYear());
+// expected output: 1976
+
+///////////////////////
+- getFullYear 
+- get UTC Full Year
+ UTC คือ timezone

@@ -1,0 +1,78 @@
+﻿ข้อแตกต่าง function และ method แต่หลักๆ คือเรียกเหมือนกัน
+
+function : parseFloat(arg); 
+method : setTimeout(arg1, arg2 ...); 
+
+//////
+JavaScript  Function * parseFloat() แปลง string ที่มีตัวเลข เป็นตัวเลข ได้ทั้ง float และ integer
+ตัวอักษรแรก ต้องเป็นตัวเลข
+
+var a = parseFloat("10"); // 10
+var b = parseFloat("10.00"); // 10.00
+var c = parseFloat("10.33"); // 10.33
+var d = parseFloat("34 45 66"); // 34
+ var e = parseFloat("   60   "); // 60
+var f = parseFloat(" 20 your 40 years"); // 20
+var g = parseFloat("He was 40"); // NaN*
+
+//////
+
+pow() Method
+Math.pow(4,3); 
+return (4*4*4)
+
+//////
+
+JavaScript function * 
+isFinite() function returns false ถ้าเป็น Nan, +- infinity
+
+isFinite(123) // true
+isFinite('123') // false
+
+//////
+JavaScript function * isInteger() Method จะจริงเมื่อเป็นจำนวนเต็ม
+
+Number.isInteger(123) //true
+Number.isInteger(-123) //true
+Number.isInteger(5-2) //true
+Number.isInteger(0) //true
+
+Number.isInteger(0.5) //false
+Number.isInteger('123') //false
+Number.isInteger(false) //false
+Number.isInteger(Infinity) //false
+Number.isInteger(-Infinity) //false
+Number.isInteger(0 / 0) //false
+//////
+toFixed() Method ปัดเลขทศนิยม
+var num = 5.56789;
+var n = num.toFixed(2); 
+return 5.57
+
+ถ้าไม่ใส่ค่า จะได้จำนวนเต็ม
+var num = 5.56789
+var n = num.toFixed(); 
+return 6
+
+//////
+* DOM insertBefore() Method
+insertBefore() method inserts a node as a child
+ * ความต้องการคือ อยากเพิ่ม child ให้ element แล้ว child ของเดิมยังอยู่ ไม่ถูก replace หรือ remove 
+
+ตัวอย่าง
+var newItem = document.createElement("LI");       		// Create a <li> node
+var textnode = document.createTextNode("Water");  		// Create a text node
+newItem.appendChild(textnode);                    		// Append the text to <li>
+
+var list = document.getElementById("myList");    // Get the <ul> element to insert a new node
+
+// เพิ่ม newItem เข้าไปใน child ของ list ตำแหน่ง list.childNoe[0] หมายถึงอันแรกสุด 
+list.insertBefore(newItem, list.childNodes[0]);  // Insert <li> before the first child of <ul>
+
+//////
+* Window setTimeout() Method
+The setTimeout() method calls a function or evaluates an expression after a specified number of milliseconds.
+
+Tip: 1000 ms = 1 second.
+
+//////

@@ -1,0 +1,6 @@
+DOM : Document Object Model
+NODE/ELEMENT : HTML tag (html, h1)
+
+- window object คือ ใหญ่สุด ส่วนด้านใน browser คือ document ประกอบด้วย root > element > head/body 
+
+- document object เป็น property ของ window object

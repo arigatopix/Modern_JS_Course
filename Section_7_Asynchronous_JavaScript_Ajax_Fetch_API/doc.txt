@@ -1,0 +1,5 @@
+fetch มาแทนที่จะใช้ XMLHttpRequest
+
++ fetch 
+  - จะ return Promise  จะใช้พวก .then ได้ แต่ไม่แสดง reject HTTP error status
+  - fetch() return promise cotaining the response *** (Response object) แล้วค่อยใช้ response.json ต่อ

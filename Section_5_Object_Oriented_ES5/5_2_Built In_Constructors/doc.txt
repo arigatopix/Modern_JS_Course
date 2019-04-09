@@ -1,0 +1,52 @@
+In JavaScript, almost "everything" is an object.
+
+Booleans can be objects (if defined with the new keyword)
+Numbers can be objects (if defined with the new keyword)
+Strings can be objects (if defined with the new keyword)
+Dates are always objects
+Maths are always objects
+Regular expressions are always objects
+Arrays are always objects
+Functions are always objects
+Objects are always objects
+All JavaScript values, except primitives, are objects.
+
+///////////////////////
+
+** JavaScript Primitives ** 
+A primitive value is a value that has no properties or methods.
+
+A primitive data type is data that has a primitive value.
+
+JavaScript defines 5 types of primitive data types:
+
+ - string
+ - number
+ - boolean
+ - null
+ - undefined
+
+ ///////////////////////
+
+สร้าง Object มี 4 วิธี
+
+Creating a JavaScript Object
+With JavaScript, you can define and create your own objects.
+
+There are different ways to create new objects:
+
+- Define and create a single object, using an object literal.
+const bas = {name : 'Teeruch', age : 26};
+
+- Define and create a single object, with the keyword new.
+const bas = new Object({{name : 'Teeruch', age : 26}});
+
+- Define an * object constructor* , and then create objects of the constructed type.
+function Person(name,age) {
+  this.name = name;
+  this.age = age;
+};
+
+const bas = Person('Bas',26);
+
+In ECMAScript 5, an object can also be created with the function Object.create().

@@ -1,0 +1,30 @@
+# Create Object
+
+# Python 
+
+class Person():
+  def __init__(self,firstName,lastName):
+    self.firstName = firstName
+    self.lastName = lastName
+    
+  # Create method
+  def greeting(self):
+    return 'Hello ' + self.firstName + ' ' + self.lastName
+
+class Customer(Person):
+  def __init__(self,firstName,lastName,phone,membership):
+    super().__init__(firstName,lastName)
+    self.phone = phone
+    self.membership = membership
+
+  def greeting(self):
+    return 'Hello ' + self.firstName + ' ' + self.lastName + ' welcome to my world.'
+
+# เรียกใช้งาน
+# Create instance Person
+john = Person('John','Doe')
+print(john.greeting())
+
+# Create instance Customer
+cus1 = Customer('Tom','Smith','555-555','Standard')
+print(cus1.greeting())
